@@ -16,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), "Created", Toast.LENGTH_SHORT).show();
         Log.i(TAG,"Created");
+        Log.v(TAG, "Создано снова");
+
     }
 
     @Override
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), "Paused", Toast.LENGTH_SHORT).show();
         Log.i(TAG,"Paused");
+        Log.v(TAG, "приложение было свернуто уже много раз");
     }
 
     @Override
@@ -48,6 +51,9 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(getApplicationContext(), "Stopped", Toast.LENGTH_SHORT).show();
         Log.i(TAG,"Stopped");
+        Log.d(TAG,"Stopped");
+        Log.w(TAG, "Заканчивается память");
+
     }
 
     @Override
