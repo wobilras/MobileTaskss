@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Taskss</string>
+    <string name="entering_main">Логин</string>
+    <string name="welcome">Добро пожаловать</string>
+    <string name="welcome2">Введите свои данные или нажмите продолжить</string>
+    <string name="contune_button">Продолжить</string>
 </resources>
