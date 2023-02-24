@@ -7,4 +7,5 @@
     <string name="exitFromAcc">Выйти из аккаунта</string>
     <string name="textProfile">Профиль</string>
     <string name="userName">UserName</string>
+    <string name="enterexitacctxt">Войдите в аккаунт</string>
 </resources>

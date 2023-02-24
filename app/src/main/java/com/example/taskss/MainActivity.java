@@ -1,18 +1,36 @@
 package com.example.taskss;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private final String TAG = "ApplicationMessage";
     Button btnContinue;
+    static final String message ="Exit";
+
+    ActivityResultLauncher<Intent> mStForRes = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+            new ActivityResultCallback<ActivityResult>() {
+        @Override
+        public void onActivityResult(ActivityResult result) {
+            TextView tw = findViewById(R.id.tofromSecActTXT);
+            Intent intent = result.getData();
+            tw.setText(intent.getStringExtra(message));
+        }
+    });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +54,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d(TAG,"Clicked button continue");
     }
     public void onClickDoLog(View view){
+        Intent intent = new Intent(this, SecondActivity.class);
+        EditText myEditText = (EditText) findViewById(R.id.editText);
+        intent.putExtra("login",myEditText.getText());
+        mStForRes.launch(intent);
         Log.d(TAG,"Clicked button continue");
     }
 
