@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private final String TAG = "ApplicationMessage";
@@ -18,6 +20,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         btnContinue = findViewById(R.id.btnContinue1);
         btnContinue.setOnClickListener((View.OnClickListener) this);
+
+        TextView myTextView = (TextView) findViewById(R.id.editText);
+        myTextView.setText("User_Login");
+        ImageView myImageView = findViewById(R.id.imageOnOpenAct);
+        myImageView.setImageResource(R.drawable.ic_action_name);
 
         //Toast.makeText(getApplicationContext(), "Created", Toast.LENGTH_SHORT).show();
         //Log.v(TAG, "Создано снова");

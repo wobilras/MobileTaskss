@@ -4,4 +4,7 @@
     <string name="welcome">Добро пожаловать</string>
     <string name="welcome2">Введите свои данные или нажмите продолжить</string>
     <string name="contune_button">Продолжить</string>
+    <string name="exitFromAcc">Выйти из аккаунта</string>
+    <string name="textProfile">Профиль</string>
+    <string name="userName">UserName</string>
 </resources>

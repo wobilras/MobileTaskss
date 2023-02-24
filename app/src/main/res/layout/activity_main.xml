@@ -14,11 +14,13 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="446dp"
         android:hint="@string/entering_main"
         android:minHeight="48dp"
         app:layout_constraintBottom_toTopOf="@+id/btnContinue1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
@@ -51,21 +53,21 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="494dp"
         android:layout_marginBottom="189dp"
+        android:onClick="onClickDoLog"
         android:text="@string/contune_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="onClickDoLog"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageOnOpenAct"
         android:layout_width="149dp"
         android:layout_height="105dp"
+        android:contentDescription="TODO"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/ic_action_name"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/ic_action_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>
