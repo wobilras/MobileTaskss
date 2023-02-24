@@ -16,7 +16,7 @@
         android:layout_alignParentBottom="true"
         android:hint="@string/entering_main"
         android:minHeight="48dp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnContinue1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -46,7 +46,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnContinue1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="494dp"
@@ -55,7 +55,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="onClickDoLog"/>
 
     <ImageView
         android:id="@+id/imageView"

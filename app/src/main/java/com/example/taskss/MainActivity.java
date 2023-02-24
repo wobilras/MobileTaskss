@@ -2,25 +2,37 @@ package com.example.taskss;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Toast;
+import android.view.View;
+import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private final String TAG = "ApplicationMessage";
+    Button btnContinue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        btnContinue = findViewById(R.id.btnContinue1);
+        btnContinue.setOnClickListener((View.OnClickListener) this);
 
         //Toast.makeText(getApplicationContext(), "Created", Toast.LENGTH_SHORT).show();
-        //Log.i(TAG,"Created");
         //Log.v(TAG, "Создано снова");
     }
 
     @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.btnContinue1)
+                Log.d(TAG,"Clicked button continue");
+    }
+    public void onClickDoLog(View view){
+        Log.d(TAG,"Clicked button continue");
+    }
+
+    /*@Override
     protected void onStart() {
         super.onStart();
         //Toast.makeText(getApplicationContext(), "Started", Toast.LENGTH_SHORT).show();
@@ -58,5 +70,5 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         //Toast.makeText(getApplicationContext(), "Destroyed", Toast.LENGTH_SHORT).show();
         //Log.i(TAG,"Destroyed");
-    }
+    }*/
 }
