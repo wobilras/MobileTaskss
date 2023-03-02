@@ -6,8 +6,6 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -17,9 +15,9 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
     private final String TAG = "ApplicationMessage";
-    Button btnContinue;
+    public Button btnContinue;
     static final String message ="Exit";
 
     ActivityResultLauncher<Intent> mStForRes = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
@@ -28,7 +26,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public void onActivityResult(ActivityResult result) {
             TextView tw = findViewById(R.id.tofromSecActTXT);
             Intent intent = result.getData();
-            tw.setText(intent.getStringExtra(message));
+            if (intent != null) {
+                tw.setText(intent.getStringExtra(message));
+            }
         }
     });
 
@@ -48,11 +48,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //Log.v(TAG, "Создано снова");
     }
 
-    @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.btnContinue1)
-                Log.d(TAG,"Clicked button continue");
-    }
     public void onClickDoLog(View view){
         Intent intent = new Intent(this, SecondActivity.class);
         EditText myEditText = (EditText) findViewById(R.id.editText);
@@ -60,44 +55,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mStForRes.launch(intent);
         Log.d(TAG,"Clicked button continue");
     }
-
-    /*@Override
-    protected void onStart() {
-        super.onStart();
-        //Toast.makeText(getApplicationContext(), "Started", Toast.LENGTH_SHORT).show();
-        //Log.i(TAG,"Started");
-    }
-    @Override
-    protected void onResume() {
-        super.onResume();
-        //Toast.makeText(getApplicationContext(), "Resumed", Toast.LENGTH_SHORT).show();
-        //Log.i(TAG,"Resumed");
-    }
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Toast.makeText(getApplicationContext(), "Paused", Toast.LENGTH_SHORT).show();
-        //Log.i(TAG,"Paused");
-        //Log.v(TAG, "приложение было свернуто уже много раз");
-    }
-    @Override
-    protected void onStop() {
-        super.onStop();
-        //Toast.makeText(getApplicationContext(), "Stopped", Toast.LENGTH_SHORT).show();
-        //Log.i(TAG,"Stopped");
-        //Log.d(TAG,"Stopped");
-        //Log.w(TAG, "Заканчивается память");
-    }
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        //Toast.makeText(getApplicationContext(), "Restarted", Toast.LENGTH_SHORT).show();
-        //Log.i(TAG,"Restarted");
-    }
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        //Toast.makeText(getApplicationContext(), "Destroyed", Toast.LENGTH_SHORT).show();
-        //Log.i(TAG,"Destroyed");
-    }*/
 }

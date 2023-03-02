@@ -64,7 +64,6 @@
         android:id="@+id/imageOnOpenAct"
         android:layout_width="149dp"
         android:layout_height="105dp"
-        android:contentDescription="TODO"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
