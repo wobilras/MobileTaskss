@@ -37,8 +37,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Toast.makeText(getApplicationContext(), "Created", Toast.LENGTH_SHORT).show();
-        //Log.v(TAG, "Создано");
     }
 
 }
