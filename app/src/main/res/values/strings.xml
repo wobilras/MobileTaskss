@@ -8,9 +8,23 @@
     <string name="textProfile">Профиль</string>
     <string name="userName">UserName</string>
     <string name="enterexitacctxt">Войдите в аккаунт</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="chooseCountryCancelButtom">Подтвердить выбор</string>
     <string name="chooseCountyEnter">Выбрать страну</string>
     <string name="countryAcc">Country</string>
+    <string name="chooseAuto">Выбрать авто</string>
+    <string-array name="Countries">
+        <item>Россия</item>
+        <item>Белоруссия</item>
+        <item>Украина</item>
+        <item>Казахстан</item>
+        <item>Таджикистан</item>
+        <item>Узбекистан</item>
+        <item>Азербайджан</item>
+        <item>Китай</item>
+        <item>Вьетнам</item>
+        <item>Финляндия</item>
+        <item>Польша</item>
+        <item>Чехия</item>
+        <item>Германия</item>
+    </string-array>
 </resources>

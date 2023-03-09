@@ -14,7 +14,6 @@
         android:layout_marginTop="667dp"
         android:layout_marginEnd="193dp"
         android:layout_marginBottom="16dp"
-        android:onClick="onClickLogout"
         android:text="@string/exitFromAcc"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,7 +58,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonCountry"
         android:layout_width="173dp"
         android:layout_height="48dp"
         android:layout_marginStart="194dp"
@@ -71,6 +70,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonChooseAuto"
+        android:layout_width="170dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="194dp"
+        android:layout_marginTop="58dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="324dp"
+        android:text="@string/chooseAuto"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/buttonCountry" />
 
     <TextView
         android:id="@+id/countryAcc"
@@ -85,4 +98,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
