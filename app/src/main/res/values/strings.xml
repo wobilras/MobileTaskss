@@ -12,6 +12,7 @@
     <string name="chooseCountyEnter">Выбрать страну</string>
     <string name="countryAcc">Country</string>
     <string name="chooseAuto">Выбрать авто</string>
+    <string name="flg" />
     <string-array name="Countries">
         <item>Россия</item>
         <item>Белоруссия</item>
