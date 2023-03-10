@@ -5,6 +5,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -39,7 +40,7 @@ public class ChooseCountryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_choose, container, false);
         List<HashMap<String,String>> lst = new ArrayList<HashMap<String,String>>();
-        for(int i=0;i<10;i++){
+        for(int i=0;i<20;i++){
             HashMap<String, String> hm = new HashMap<String,String>();
             hm.put("txt", countries[i]);
             hm.put("flag", Integer.toString(R.drawable.aiga_toilet_men) );

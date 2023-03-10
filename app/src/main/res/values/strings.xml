@@ -27,5 +27,34 @@
         <item>Польша</item>
         <item>Чехия</item>
         <item>Германия</item>
+        <item>ОАЭ</item>
+        <item>Швеция</item>
+        <item>Монголия</item>
+        <item>Франция</item>
+        <item>Италия</item>
+        <item>Венгрия</item>
+        <item>Англия</item>
+    </string-array>
+    <string-array name="MarksOfCars">
+        <item>Nissan</item>
+        <item>Toyota</item>
+        <item>Lexus</item>
+        <item>BMW</item>
+        <item>Audi</item>
+        <item>Ford</item>
+        <item>Kia</item>
+        <item>Skoda</item>
+        <item>Volkswagen</item>
+        <item>Renault</item>
+        <item>Hyundai</item>
+        <item>Mazda</item>
+        <item>Honda</item>
+        <item>Lada</item>
+        <item>Mercedes-Benz</item>
+        <item>Mitsubishi</item>
+        <item>Datsun</item>
+        <item>Tesla</item>
+        <item>Chevrolet</item>
+        <item>Cadillac</item>
     </string-array>
 </resources>
