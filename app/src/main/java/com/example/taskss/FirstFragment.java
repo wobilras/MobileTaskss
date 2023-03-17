@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -41,8 +42,11 @@ public class FirstFragment extends Fragment{
             public void onClick(View v) {
                 if(v.getId() == R.id.btnContinue1) {
                     Log.d(TAG, "Clicked button continue");
-
-                    Navigation.findNavController(v).navigate(R.id.action_firstFragment_to_secondFragment2);
+                    EditText ed = v.findViewById(R.id.editText);
+                    String data = ed.getText().toString();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("data",data);
+                    Navigation.findNavController(v).navigate(R.id.action_firstFragment_to_secondFragment2, bundle);
                 }
             }
         });

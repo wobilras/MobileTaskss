@@ -32,33 +32,13 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        btnCountry = (Button) view.findViewById(R.id.buttonCountry);
+        btnCountry = view.findViewById(R.id.buttonCountry);
         btnCountry.setOnClickListener(this);
-        btnCars = (Button) view.findViewById(R.id.buttonChooseAuto);
+        btnCars = view.findViewById(R.id.buttonChooseAuto);
         btnCars.setOnClickListener(this);
-        /*btnCountry.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("NonConstantResourceId")
-            @Override
-            public void onClick(View v) {
-                switch (v.getId()){
-                    case R.id.buttonCountry:
-                        Log.d("111","Clicked country choose");
-                        Navigation.findNavController(view).navigate(R.id.action_secondFragment2_to_chooseCountryFragment);
-                        break;
-                    case R.id.buttonChooseAuto:
-                        Log.d("111","Clicked auto choose");
-                        Navigation.findNavController(view).navigate(R.id.action_secondFragment2_to_fragmentResview);
-                        break;
-                }
-            }
-        });*/
+        TextView tv = view.findViewById(R.id.userName);
+        tv.setText(getArguments().getString("data"));
     }
-
-    public void setSelectedItem(String selectedItem) {
-        TextView view = getView().findViewById(R.id.countryAcc);
-        view.setText(selectedItem);
-    }
-
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -71,5 +51,10 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
                 Navigation.findNavController(v).navigate(R.id.action_secondFragment2_to_fragmentResview);
                 break;
         }
+    }
+
+    public void setSelectedItem(String selectedItem) {
+        TextView view = getView().findViewById(R.id.countryAcc);
+        view.setText(selectedItem);
     }
 }

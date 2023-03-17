@@ -23,6 +23,10 @@
         <action
             android:id="@+id/action_secondFragment2_to_fragmentResview"
             app:destination="@id/fragmentResview" />
+        <argument
+            android:name="Login"
+            app:argType="string"
+            android:defaultValue="User" />
     </fragment>
     <fragment
         android:id="@+id/chooseCountryFragment"
