@@ -6,6 +6,7 @@ import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -64,7 +65,8 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.buttonMessageTest:
                 Log.d("111","Clicked message");
-                //checkPermission(Manifest.permission.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION, 100);
+                Intent intent = new Intent(requireContext(), CarService.class);
+                requireActivity().startService(intent);
                 showNotification();
         }
     }
