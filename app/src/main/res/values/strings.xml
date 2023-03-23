@@ -13,6 +13,7 @@
     <string name="countryAcc">Country</string>
     <string name="chooseAuto">Выбрать авто</string>
     <string name="flg" />
+    <string name="messageTest">Проверка Сообщений</string>
     <string-array name="Countries">
         <item>Россия</item>
         <item>Белоруссия</item>

@@ -1,21 +1,28 @@
 package com.example.taskss;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
+import android.app.Notification;
+import android.app.NotificationChannel;
+import android.app.NotificationManager;
+import android.content.Context;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
-
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import androidx.navigation.Navigation;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.core.app.ActivityCompat;
+import androidx.core.app.NotificationCompat;
+import androidx.core.content.ContextCompat;
+import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import java.util.Objects;
 
@@ -23,6 +30,8 @@ import java.util.Objects;
 public class SecondFragment extends Fragment implements View.OnClickListener {
     public Button btnCountry;
     public Button btnCars;
+    public Button btnMessage;
+    private static final String CHANNEL_ID = "TestChannel";
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -36,8 +45,11 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
         btnCountry.setOnClickListener(this);
         btnCars = view.findViewById(R.id.buttonChooseAuto);
         btnCars.setOnClickListener(this);
-        TextView tv = view.findViewById(R.id.userName);
-        tv.setText(getArguments().getString("data"));
+        btnMessage = view.findViewById(R.id.buttonMessageTest);
+        btnMessage.setOnClickListener(this);
+        //TextView tv = view.findViewById(R.id.userName);
+        //tv.setText(getArguments().getString("data"));
+        createNotificationChannel();
     }
     @Override
     public void onClick(View v) {
@@ -50,11 +62,38 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
                 Log.d("111","Clicked auto choose");
                 Navigation.findNavController(v).navigate(R.id.action_secondFragment2_to_fragmentResview);
                 break;
+            case R.id.buttonMessageTest:
+                Log.d("111","Clicked message");
+                //checkPermission(Manifest.permission.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION, 100);
+                showNotification();
+        }
+    }
+    private void showNotification() {
+        Notification notification = new NotificationCompat.Builder(requireContext(), CHANNEL_ID)
+                .setSmallIcon(R.drawable.ic_action_name)
+                .setContentText("Раз вы видите сообщение, то проверка прошла успешно")
+                .setContentTitle("Успешно")
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .build();
+
+        NotificationManager notificationManager =
+                (NotificationManager) requireContext().getSystemService(Context.NOTIFICATION_SERVICE);
+
+        notificationManager.notify(1, notification);
+
+    }
+    private void createNotificationChannel() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel channel = new NotificationChannel(
+                    CHANNEL_ID,
+                    "TestChannel",
+                    NotificationManager.IMPORTANCE_DEFAULT
+            );
+
+            NotificationManager notificationManager =
+                    (NotificationManager) requireContext().getSystemService(Context.NOTIFICATION_SERVICE);
+            notificationManager.createNotificationChannel(channel);
         }
     }
 
-    public void setSelectedItem(String selectedItem) {
-        TextView view = getView().findViewById(R.id.countryAcc);
-        view.setText(selectedItem);
-    }
 }

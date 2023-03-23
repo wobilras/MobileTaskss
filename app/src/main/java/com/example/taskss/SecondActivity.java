@@ -15,10 +15,10 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
     }
 
-    public void onSendData(String selectedItem) {
+    /*public void onSendData(String selectedItem) {
         SecondFragment fragment = (SecondFragment) getSupportFragmentManager().findFragmentById(R.id.secondFragment);
         if (fragment != null)
             fragment.setSelectedItem(selectedItem);
-    }
+    }*/
 
 }

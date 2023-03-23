@@ -40,13 +40,13 @@ public class FirstFragment extends Fragment{
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(v.getId() == R.id.btnContinue1) {
+                if(view.getId() == R.id.btnContinue1) {
                     Log.d(TAG, "Clicked button continue");
                     EditText ed = v.findViewById(R.id.editText);
                     String data = ed.getText().toString();
                     Bundle bundle = new Bundle();
                     bundle.putString("data",data);
-                    Navigation.findNavController(v).navigate(R.id.action_firstFragment_to_secondFragment2, bundle);
+                    Navigation.findNavController(view).navigate(R.id.action_firstFragment_to_secondFragment2, bundle);
                 }
             }
         });
