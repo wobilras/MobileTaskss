@@ -1,4 +1,4 @@
-package com.example.taskss;
+package com.example.taskss.ui;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
@@ -17,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.taskss.R;
 import com.example.taskss.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {

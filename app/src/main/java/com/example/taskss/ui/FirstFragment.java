@@ -1,4 +1,4 @@
-package com.example.taskss;
+package com.example.taskss.ui;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -18,6 +18,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.example.taskss.R;
 
 public class FirstFragment extends Fragment{
     private final String TAG = "ApplicationMessage";

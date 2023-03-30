@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/firstFragment"
-        android:name="com.example.taskss.FirstFragment"
+        android:name="com.example.taskss.ui.FirstFragment"
         android:label="FirstFragment" >
         <action
             android:id="@+id/action_firstFragment_to_secondFragment2"
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/secondFragment2"
-        android:name="com.example.taskss.SecondFragment"
+        android:name="com.example.taskss.ui.SecondFragment"
         android:label="SecondFragment" >
         <action
             android:id="@+id/action_secondFragment2_to_chooseCountryFragment"
@@ -30,12 +30,12 @@
     </fragment>
     <fragment
         android:id="@+id/chooseCountryFragment"
-        android:name="com.example.taskss.ChooseCountryFragment"
+        android:name="com.example.taskss.ui.ChooseCountryFragment"
         android:label="fragment_choose"
         tools:layout="@layout/fragment_choose" />
     <fragment
         android:id="@+id/fragmentResview"
-        android:name="com.example.taskss.FragmentResview"
+        android:name="com.example.taskss.ui.FragmentResview"
         android:label="fragment_resview"
         tools:layout="@layout/fragment_resview" />
 </navigation>

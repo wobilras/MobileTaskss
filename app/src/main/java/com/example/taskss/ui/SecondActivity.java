@@ -1,4 +1,4 @@
-package com.example.taskss;
+package com.example.taskss.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.taskss.R;
 
 public class SecondActivity extends AppCompatActivity {
 

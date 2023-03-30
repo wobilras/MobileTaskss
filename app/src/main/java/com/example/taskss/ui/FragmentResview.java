@@ -1,4 +1,4 @@
-package com.example.taskss;
+package com.example.taskss.ui;
 
 import android.os.Bundle;
 
@@ -12,7 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.taskss.R;
 import com.example.taskss.domain.entity.State;
+import com.example.taskss.ui.state_holder.StateAdapter;
 
 import java.util.ArrayList;
 

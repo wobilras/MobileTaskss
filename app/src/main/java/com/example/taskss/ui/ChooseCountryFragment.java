@@ -1,4 +1,4 @@
-package com.example.taskss;
+package com.example.taskss.ui;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
@@ -17,6 +17,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
+
+import com.example.taskss.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,4 +1,4 @@
-package com.example.taskss;
+package com.example.taskss.ui;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -24,6 +24,9 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+
+import com.example.taskss.CarService;
+import com.example.taskss.R;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package com.example.taskss;
+package com.example.taskss.ui.state_holder;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -11,15 +11,16 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.taskss.R;
 import com.example.taskss.domain.entity.State;
 
 import java.util.List;
 
 public class StateAdapter extends RecyclerView.Adapter<StateAdapter.ViewHolder>{
-    interface OnStateClickListener{
+    public interface OnStateClickListener{
         void onStateClick(State state, int position);
     }
-    private final OnStateClickListener onClickListener;
+    public final OnStateClickListener onClickListener;
 
     private final LayoutInflater inflater;
     private final List<State> states;

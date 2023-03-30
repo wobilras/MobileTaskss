@@ -5,7 +5,7 @@
     android:id="@+id/fragment_container_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:name="com.example.taskss.SecondFragment"
+    android:name="com.example.taskss.ui.SecondFragment"
     tools:layout="@layout/fragment_second"     />
     <!-->app:navGraph="@navigation/nav_graph"
     tools:context=".MainActivity"<!-->
