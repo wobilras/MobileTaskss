@@ -11,7 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.HashMap;
+import com.example.taskss.domain.entity.State;
+
 import java.util.List;
 
 public class StateAdapter extends RecyclerView.Adapter<StateAdapter.ViewHolder>{
@@ -62,24 +63,4 @@ public class StateAdapter extends RecyclerView.Adapter<StateAdapter.ViewHolder>{
     }
 }
 
-class State{
-    private String name; // название
-    private int carResource; // ресурс флага
 
-    public State(String name, int flag){
-        this.name=name;
-        this.carResource=flag;
-    }
-    public String getName() {
-        return this.name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public int getCarResource() {
-        return this.carResource;
-    }
-    public void setCarResource(int carResource) {
-        this.carResource = carResource;
-    }
-}
