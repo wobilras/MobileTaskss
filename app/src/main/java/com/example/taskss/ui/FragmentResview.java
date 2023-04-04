@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
@@ -13,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.taskss.R;
-import com.example.taskss.domain.entity.State;
+import com.example.taskss.data.models.State;
 import com.example.taskss.ui.state_holder.StateAdapter;
 
 import java.util.ArrayList;
@@ -40,6 +41,7 @@ public class FragmentResview extends Fragment {
             public void onStateClick(State state, int position) {
                 Log.d(TAG,state.getName());
                 Toast.makeText(getContext(), state.getName(), Toast.LENGTH_SHORT).show();
+                Navigation.findNavController(view).navigate(R.id.action_fragmentResview_to_carInfoFragment);
             }
         };
         StateAdapter adapter = new StateAdapter(getContext(), states, stateClickListener);

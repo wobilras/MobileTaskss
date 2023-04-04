@@ -1,4 +1,4 @@
-package com.example.taskss.domain.entity;
+package com.example.taskss.data.models;
 
 public class LoginPerson {
     private final String Login;

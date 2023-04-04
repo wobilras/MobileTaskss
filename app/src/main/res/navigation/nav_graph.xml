@@ -37,5 +37,13 @@
         android:id="@+id/fragmentResview"
         android:name="com.example.taskss.ui.FragmentResview"
         android:label="fragment_resview"
-        tools:layout="@layout/fragment_resview" />
+        tools:layout="@layout/fragment_resview" >
+        <action
+            android:id="@+id/action_fragmentResview_to_carInfoFragment"
+            app:destination="@id/carInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/carInfoFragment"
+        android:name="com.example.taskss.ui.CarInfoFragment"
+        android:label="CarInfoFragment" />
 </navigation>

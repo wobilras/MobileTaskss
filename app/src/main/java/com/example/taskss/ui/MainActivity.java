@@ -22,7 +22,6 @@ import com.example.taskss.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     private final String TAG = "ApplicationMessage";
-    private ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

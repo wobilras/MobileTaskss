@@ -1,8 +1,8 @@
-package com.example.taskss.domain.entity;
+package com.example.taskss.data.models;
 
 public class State {
-    private String name; // название
-    private int carResource; // ресурс флага
+    private String name;
+    private int carResource;
 
     public State(String name, int flag){
         this.name=name;

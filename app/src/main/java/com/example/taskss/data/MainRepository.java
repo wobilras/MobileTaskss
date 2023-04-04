@@ -2,23 +2,24 @@ package com.example.taskss.data;
 
 import android.content.Context;
 
-import com.example.taskss.domain.MainRepository;
-import com.example.taskss.domain.entity.LoginPerson;
-import com.example.taskss.domain.entity.State;
+import androidx.lifecycle.LiveData;
+
+import com.example.taskss.data.models.LoginPerson;
+import com.example.taskss.data.models.State;
 
 import java.util.List;
 
-public class MainRepositoryImpl implements MainRepository {
+public class MainRepository implements MainProtocol {
     private Context context;
     private DBRemoteDataSource dataSource;
 
-    public MainRepositoryImpl(Context context) {
+    public MainRepository(Context context) {
         this.context = context;
         dataSource = new DBRemoteDataSource(context);
     }
 
     @Override
-    public List<State> getArchiveList() {
+    public LiveData<List<State>> getArchiveList() {
         return dataSource.getCarList();
     }
 

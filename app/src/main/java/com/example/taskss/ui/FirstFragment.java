@@ -21,9 +21,10 @@ import android.widget.Toast;
 
 import com.example.taskss.R;
 
-public class FirstFragment extends Fragment{
+public class FirstFragment extends Fragment {
     private final String TAG = "ApplicationMessage";
     public Button btnContinue;
+
     public FirstFragment() {
         super(R.layout.fragment_first);
     }
@@ -32,24 +33,24 @@ public class FirstFragment extends Fragment{
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
     }
+
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_first, container, false);
     }
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState){
+
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        EditText ed = view.findViewById(R.id.editText);
         btnContinue = (Button) view.findViewById(R.id.btnContinue1);
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(view.getId() == R.id.btnContinue1) {
-                    Log.d(TAG, "Clicked button continue");
-                    EditText ed = v.findViewById(R.id.editText);
-                    String data = ed.getText().toString();
-                    Bundle bundle = new Bundle();
-                    bundle.putString("data",data);
-                    Navigation.findNavController(view).navigate(R.id.action_firstFragment_to_secondFragment2, bundle);
-                }
+                Log.d(TAG, "Clicked button continue");
+                String data = ed.getText().toString();
+                Bundle bundle = new Bundle();
+                bundle.putString("data", data);
+                Navigation.findNavController(v).navigate(R.id.action_firstFragment_to_secondFragment2, bundle);
             }
         });
         TextView myTextView = (TextView) view.findViewById(R.id.editText);
