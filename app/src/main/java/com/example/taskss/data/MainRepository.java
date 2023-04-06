@@ -19,12 +19,19 @@ public class MainRepository implements MainProtocol {
     }
 
     @Override
-    public LiveData<List<State>> getArchiveList() {
+    public LiveData<List<State>> getCarList() {
         return dataSource.getCarList();
     }
+
+
 
     @Override
     public boolean personLogin(LoginPerson loginPerson) {
         return dataSource.PersonLogin(loginPerson);
+    }
+
+    @Override
+    public LiveData<State> getItem(int position) {
+        return dataSource.getItem(position);
     }
 }

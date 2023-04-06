@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentResultListener;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import android.util.Log;
@@ -20,10 +21,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.taskss.R;
+import com.example.taskss.ui.state_holder.FirstViewModel;
 
 public class FirstFragment extends Fragment {
     private final String TAG = "ApplicationMessage";
     public Button btnContinue;
+
+    private FirstViewModel viewModel;
 
     public FirstFragment() {
         super(R.layout.fragment_first);
@@ -40,6 +44,7 @@ public class FirstFragment extends Fragment {
     }
 
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        viewModel = new ViewModelProvider(this).get(FirstViewModel.class);
         super.onViewCreated(view, savedInstanceState);
         EditText ed = view.findViewById(R.id.editText);
         btnContinue = (Button) view.findViewById(R.id.btnContinue1);
@@ -50,7 +55,9 @@ public class FirstFragment extends Fragment {
                 String data = ed.getText().toString();
                 Bundle bundle = new Bundle();
                 bundle.putString("data", data);
-                Navigation.findNavController(v).navigate(R.id.action_firstFragment_to_secondFragment2, bundle);
+                if (viewModel.login(ed.getText().toString())) {
+                    Navigation.findNavController(v).navigate(R.id.action_firstFragment_to_secondFragment2, bundle);
+                }
             }
         });
         TextView myTextView = (TextView) view.findViewById(R.id.editText);

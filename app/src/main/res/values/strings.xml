@@ -3,12 +3,12 @@
     <string name="entering_main">Логин</string>
     <string name="welcome">Добро пожаловать</string>
     <string name="welcome2">Введите свои данные или нажмите продолжить</string>
-    <string name="contune_button">Продолжить</string>
+    <string name="continue_button">Продолжить</string>
     <string name="exitFromAcc">Выйти из аккаунта</string>
     <string name="textProfile">Профиль</string>
     <string name="userName">UserName</string>
     <string name="enterexitacctxt">Войдите в аккаунт</string>
-    <string name="chooseCountryCancelButtom">Подтвердить выбор</string>
+    <string name="chooseCountryCancelButton">Подтвердить выбор</string>
     <string name="chooseCountyEnter">Выбрать страну</string>
     <string name="countryAcc">Country</string>
     <string name="chooseAuto">Выбрать авто</string>
@@ -19,6 +19,7 @@
     <string name="fuel">Уровень топлива</string>
     <string name="reservating">Забронировать авто</string>
     <string name="backFromInfo">Назад к списку</string>
+    <string name="carNumber">C845OK69</string>
     <string-array name="Countries">
         <item>Россия</item>
         <item>Белоруссия</item>

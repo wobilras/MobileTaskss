@@ -11,34 +11,27 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="667dp"
-        android:layout_marginEnd="193dp"
         android:layout_marginBottom="16dp"
         android:text="@string/exitFromAcc"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="165dp"
         android:layout_height="181dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginBottom="485dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textProfile"
         app:srcCompat="@drawable/aiga_toilet_men" />
 
     <TextView
         android:id="@+id/textProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="32dp"
         android:text="@string/textProfile"
-        app:layout_constraintBottom_toTopOf="@+id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -48,71 +41,53 @@
         android:layout_width="163dp"
         android:layout_height="19dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="285dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="232dp"
-        android:layout_marginBottom="427dp"
         android:text="@string/userName"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
         android:id="@+id/buttonCountry"
         android:layout_width="173dp"
         android:layout_height="48dp"
-        android:layout_marginStart="194dp"
-        android:layout_marginTop="304dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="387dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/chooseCountyEnter"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <Button
         android:id="@+id/buttonChooseAuto"
         android:layout_width="173dp"
         android:layout_height="48dp"
-        android:layout_marginStart="194dp"
-        android:layout_marginTop="58dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="324dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/chooseAuto"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/buttonCountry"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonCountry" />
 
     <TextView
         android:id="@+id/countryAcc"
         android:layout_width="163dp"
         android:layout_height="19dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="232dp"
-        android:layout_marginBottom="392dp"
         android:text="@string/countryAcc"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/userName" />
 
     <Button
         android:id="@+id/buttonMessageTest"
         android:layout_width="173dp"
         android:layout_height="55dp"
-        android:layout_marginStart="194dp"
-        android:layout_marginTop="421dp"
-        android:layout_marginEnd="44dp"
-        android:layout_marginBottom="259dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
         android:text="@string/messageTest"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonChooseAuto" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

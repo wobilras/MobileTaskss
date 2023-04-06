@@ -32,4 +32,15 @@ public class DBRemoteDataSource {
     public boolean PersonLogin(LoginPerson loginPerson){
         return true;
     }
+
+    public LiveData<State> getItem(int position) {
+        List<State> states = new ArrayList<>();
+        String[] cars = context.getResources().getStringArray(R.array.MarksOfCars);
+        for(int i=0;i<20;i++){
+            states.add(new State (cars[i], R.drawable.ic_action_name));
+        }
+        MutableLiveData<State> liveDataState = new MutableLiveData<>();
+        liveDataState.setValue(states.get(position));
+        return liveDataState;
+    }
 }
