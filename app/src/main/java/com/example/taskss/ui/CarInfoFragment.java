@@ -13,10 +13,8 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
 import com.example.taskss.R;
-import com.example.taskss.data.models.State;
+import com.example.taskss.data.db.entity.State;
 import com.example.taskss.ui.state_holder.CarInfoViewModel;
-
-import java.util.List;
 
 public class CarInfoFragment extends Fragment {
     public CarInfoFragment() {

@@ -7,7 +7,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import com.example.taskss.data.MainRepository;
-import com.example.taskss.data.models.State;
+import com.example.taskss.data.db.entity.State;
 
 public class CarInfoViewModel extends AndroidViewModel {
 

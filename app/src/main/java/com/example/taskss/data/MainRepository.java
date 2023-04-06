@@ -5,7 +5,7 @@ import android.content.Context;
 import androidx.lifecycle.LiveData;
 
 import com.example.taskss.data.models.LoginPerson;
-import com.example.taskss.data.models.State;
+import com.example.taskss.data.db.entity.State;
 
 import java.util.List;
 
@@ -24,10 +24,9 @@ public class MainRepository implements MainProtocol {
     }
 
 
-
     @Override
-    public boolean personLogin(LoginPerson loginPerson) {
-        return dataSource.PersonLogin(loginPerson);
+    public boolean personLogin(LoginPerson loginPerson, boolean allow) {
+        return dataSource.PersonLogin(loginPerson, allow);
     }
 
     @Override

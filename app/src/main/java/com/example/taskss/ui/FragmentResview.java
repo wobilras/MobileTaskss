@@ -17,11 +17,10 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.example.taskss.R;
-import com.example.taskss.data.models.State;
+import com.example.taskss.data.db.entity.State;
 import com.example.taskss.ui.state_holder.ReviewViewModel;
 import com.example.taskss.ui.state_holder.StateAdapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class FragmentResview extends Fragment {

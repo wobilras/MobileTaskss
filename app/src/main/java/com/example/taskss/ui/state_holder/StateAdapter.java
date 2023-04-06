@@ -12,7 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.taskss.R;
-import com.example.taskss.data.models.State;
+import com.example.taskss.data.db.entity.State;
 
 import java.util.List;
 
