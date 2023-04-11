@@ -3,6 +3,7 @@ package com.example.taskss.ui;
 import static androidx.core.content.PermissionChecker.checkSelfPermission;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -53,12 +54,23 @@ public class FirstFragment extends Fragment {
         viewModel = new ViewModelProvider(this).get(FirstViewModel.class);
         super.onViewCreated(view, savedInstanceState);
         EditText ed = view.findViewById(R.id.editText);
+        Intent intent = requireActivity().getIntent();
+        if (intent != null) {
+            String action = intent.getAction();
+            String type = intent.getType();
+            if (Intent.ACTION_SEND.equals(action) && type != null) {
+                if (type.equalsIgnoreCase("text/plain")) {
+                    String textData = intent.getStringExtra(Intent.EXTRA_TEXT);
+                    ed.setText(textData);
+                }
+            }
+        }
 
         // read
-        SharedPreferences sharedPrefRead =
-                requireActivity().getPreferences(Context.MODE_PRIVATE);
-        String loginSP = sharedPrefRead.getString(KEY_LOGIN, "");
-        ed.setText(loginSP);
+//        SharedPreferences sharedPrefRead =
+//                requireActivity().getPreferences(Context.MODE_PRIVATE);
+//        String loginSP = sharedPrefRead.getString(KEY_LOGIN, "");
+//        ed.setText(loginSP);
 
         btnContinue = (Button) view.findViewById(R.id.btnContinue1);
         btnContinue.setOnClickListener(new View.OnClickListener() {

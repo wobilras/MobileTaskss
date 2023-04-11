@@ -1,13 +1,10 @@
 package com.example.taskss.ui;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,26 +12,22 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
 import com.example.taskss.CarService;
 import com.example.taskss.R;
 
-import java.util.Objects;
-
 
 public class SecondFragment extends Fragment implements View.OnClickListener {
     public Button btnCountry;
     public Button btnCars;
     public Button btnMessage;
+    public Button btnShare;
     private static final String CHANNEL_ID = "TestChannel";
 
     @Override
@@ -51,9 +44,12 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
         btnCars.setOnClickListener(this);
         btnMessage = view.findViewById(R.id.buttonMessageTest);
         btnMessage.setOnClickListener(this);
+        btnShare = view.findViewById(R.id.buttonShare);
+        btnShare.setOnClickListener(this);
         //TextView tv = view.findViewById(R.id.userName);
         //tv.setText(getArguments().getString("data"));
         createNotificationChannel();
+
     }
     @Override
     public void onClick(View v) {
@@ -71,6 +67,16 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
                 Intent intent = new Intent(requireContext(), CarService.class);
                 requireActivity().startService(intent);
                 showNotification();
+                break;
+            case R.id.buttonShare:
+                Log.d("111", "Clicked share");
+                Intent textIntent = new Intent(Intent.ACTION_SEND);
+                textIntent.setType("text/plain");
+                textIntent.putExtra(Intent.EXTRA_SUBJECT, "GOUL_SSS+");
+                textIntent.putExtra(Intent.EXTRA_EMAIL, "sheshukov@mirea.ru");
+                textIntent.putExtra(Intent.EXTRA_TEXT, "Присоединяйтесь к CrashAPP");
+                requireActivity().startActivity(textIntent);
+                break;
         }
     }
     private void showNotification() {

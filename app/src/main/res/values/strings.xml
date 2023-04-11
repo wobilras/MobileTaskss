@@ -20,6 +20,7 @@
     <string name="reservating">Забронировать авто</string>
     <string name="backFromInfo">Назад к списку</string>
     <string name="carNumber">C845OK69</string>
+    <string name="share">Поделиться</string>
     <string-array name="Countries">
         <item>Россия</item>
         <item>Белоруссия</item>
