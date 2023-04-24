@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -46,8 +47,8 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
         btnMessage.setOnClickListener(this);
         btnShare = view.findViewById(R.id.buttonShare);
         btnShare.setOnClickListener(this);
-        //TextView tv = view.findViewById(R.id.userName);
-        //tv.setText(getArguments().getString("data"));
+        TextView tv = view.findViewById(R.id.userName);
+        tv.setText(getArguments().getString("data"));
         createNotificationChannel();
 
     }
@@ -73,7 +74,7 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
                 Intent textIntent = new Intent(Intent.ACTION_SEND);
                 textIntent.setType("text/plain");
                 textIntent.putExtra(Intent.EXTRA_SUBJECT, "GOUL_SSS+");
-                textIntent.putExtra(Intent.EXTRA_EMAIL, "sheshukov@mirea.ru");
+                textIntent.putExtra(Intent.EXTRA_EMAIL, "CrashAPP@gmail.com");
                 textIntent.putExtra(Intent.EXTRA_TEXT, "Присоединяйтесь к CrashAPP");
                 requireActivity().startActivity(textIntent);
                 break;

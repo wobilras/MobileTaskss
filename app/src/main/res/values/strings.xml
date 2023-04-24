@@ -65,4 +65,32 @@
         <item>Chevrolet</item>
         <item>Cadillac</item>
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tripCost">Стоимость поездки</string>
+    <string name="costReserved">100.0</string>
+    <string name="costValRes">Руб.</string>
+    <string name="carOpen">Открыть двери</string>
+    <string name="carFinish">Завершить аренду</string>
+    <string name="password">Пароль</string>
+    <string name="registration">Регистрация</string>
+    <string name="enterElMail">Введите эл. почту</string>
+    <string name="enterLogin">Введите логин</string>
+    <string name="enterPass">Введите пароль</string>
+    <string name="enter2Pass">Повторите пароль</string>
+    <string name="elMail">Эл. почта</string>
+    <string name="downloadLicense">Загрузите фото прав</string>
+    <string name="downloadImage">Загрузить фото</string>
+    <string name="enterLicenseNum">Введите номер прав</string>
+    <string name="enterLicenseType">Выберете тип прав</string>
+    <string name="mecanic">Механика</string>
+    <string name="licenseNumber">Номер прав</string>
+    <string name="birthDate">Дата рождения</string>
+    <string name="enterPasportNumber">Введите номер паспорта</string>
+    <string name="passportNumber">Номер паспорта</string>
+    <string name="enterFIO">Введите ФИО</string>
+    <string name="fullName">ФИО</string>
+    <string name="enterBirthDate">Введите дату рождения</string>
+    <string name="downloadImagePassport">Загрузите фото паспорта</string>
+    <string name="buttonDownloadPass">Загрузить фото паспорта</string>
 </resources>

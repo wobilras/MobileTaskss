@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_firstFragment_to_secondFragment2"
             app:destination="@id/secondFragment2" />
+        <action
+            android:id="@+id/action_firstFragment_to_registration"
+            app:destination="@id/registration" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment2"
@@ -47,5 +50,38 @@
     <fragment
         android:id="@+id/carInfoFragment"
         android:name="com.example.taskss.ui.CarInfoFragment"
-        android:label="CarInfoFragment" />
+        android:label="CarInfoFragment"
+        tools:layout="@layout/fragmet_car_info">
+        <action
+            android:id="@+id/action_carInfoFragment_to_reservedCar"
+            app:destination="@id/reservedCar" />
+    </fragment>
+    <fragment
+        android:id="@+id/reservedCar"
+        android:name="com.example.taskss.ui.ReservedCar"
+        android:label="fragment_reserved_car"
+        tools:layout="@layout/fragment_reserved_car" />
+    <fragment
+        android:id="@+id/registration"
+        android:name="com.example.taskss.ui.Registration1"
+        android:label="fragment_registration"
+        tools:layout="@layout/fragment_registration1" >
+        <action
+            android:id="@+id/action_registration_to_registration2"
+            app:destination="@id/registration2" />
+    </fragment>
+    <fragment
+        android:id="@+id/registration2"
+        android:name="com.example.taskss.ui.Registration2"
+        android:label="fragment_registration2"
+        tools:layout="@layout/fragment_registration2" >
+        <action
+            android:id="@+id/action_registration2_to_registration3"
+            app:destination="@id/registration3" />
+    </fragment>
+    <fragment
+        android:id="@+id/registration3"
+        android:name="com.example.taskss.ui.state_holder.Registration3"
+        android:label="fragment_registration3"
+        tools:layout="@layout/fragment_registration3" />
 </navigation>
