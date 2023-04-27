@@ -33,6 +33,7 @@ public class FirstFragment extends Fragment {
     private static final String KEY_LOGIN = "login";
     private final String TAG = "ApplicationMessage";
     public Button btnContinue;
+    public Button btnReg;
 
     private FirstViewModel viewModel;
 
@@ -92,8 +93,16 @@ public class FirstFragment extends Fragment {
                         ed.getText().toString(),
                         allowedPermission()
                 )) {
-                    Navigation.findNavController(v).navigate(R.id.action_firstFragment_to_secondFragment2, bundle);
+                    Navigation.findNavController(v).navigate(R.id.action_firstFragment_to_menuFragment, bundle);
                 }
+            }
+        });
+        btnReg = view.findViewById(R.id.registrationButton);
+        btnReg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d(TAG,"Clicked button registration");
+                Navigation.findNavController(v).navigate(R.id.action_firstFragment_to_registration);
             }
         });
 //        TextView myTextView = (TextView) view.findViewById(R.id.editText);
@@ -101,7 +110,6 @@ public class FirstFragment extends Fragment {
         ImageView myImageView = view.findViewById(R.id.imageOnOpenAct);
         myImageView.setImageResource(R.drawable.ic_action_name);
     }
-
     private boolean allowedPermission() {
         if (checkSelfPermission(requireContext(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 == PermissionChecker.PERMISSION_GRANTED) {

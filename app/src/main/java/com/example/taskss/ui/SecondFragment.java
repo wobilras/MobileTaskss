@@ -29,6 +29,7 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
     public Button btnCars;
     public Button btnMessage;
     public Button btnShare;
+    public Button btnLogout;
     private static final String CHANNEL_ID = "TestChannel";
 
     @Override
@@ -47,6 +48,8 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
         btnMessage.setOnClickListener(this);
         btnShare = view.findViewById(R.id.buttonShare);
         btnShare.setOnClickListener(this);
+        btnLogout = view.findViewById(R.id.exitFromAcc);
+        btnLogout.setOnClickListener(this);
         TextView tv = view.findViewById(R.id.userName);
         tv.setText(getArguments().getString("data"));
         createNotificationChannel();
@@ -77,6 +80,10 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
                 textIntent.putExtra(Intent.EXTRA_EMAIL, "CrashAPP@gmail.com");
                 textIntent.putExtra(Intent.EXTRA_TEXT, "Присоединяйтесь к CrashAPP");
                 requireActivity().startActivity(textIntent);
+                break;
+            case R.id.exitFromAcc:
+                Log.d("111", "Clicked logout");
+                Navigation.findNavController(v).navigate(R.id.action_secondFragment2_to_firstFragment);
                 break;
         }
     }

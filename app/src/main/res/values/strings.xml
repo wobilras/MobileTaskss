@@ -93,4 +93,8 @@
     <string name="enterBirthDate">Введите дату рождения</string>
     <string name="downloadImagePassport">Загрузите фото паспорта</string>
     <string name="buttonDownloadPass">Загрузить фото паспорта</string>
+    <string name="map">Карта</string>
+    <string name="nearestCars">Ближайшие авто</string>
+    <string name="aboutTheApp">О приложении</string>
+    <string name="settings">Настройки</string>
 </resources>

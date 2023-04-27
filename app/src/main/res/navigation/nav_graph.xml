@@ -11,11 +11,11 @@
         android:label="FirstFragment"
         tools:layout="@layout/fragment_first">
         <action
-            android:id="@+id/action_firstFragment_to_secondFragment2"
-            app:destination="@id/secondFragment2" />
-        <action
             android:id="@+id/action_firstFragment_to_registration"
             app:destination="@id/registration" />
+        <action
+            android:id="@+id/action_firstFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/secondFragment2"
@@ -32,6 +32,9 @@
             android:name="Login"
             app:argType="string"
             android:defaultValue="User" />
+        <action
+            android:id="@+id/action_secondFragment2_to_firstFragment"
+            app:destination="@id/firstFragment" />
     </fragment>
     <fragment
         android:id="@+id/chooseCountryFragment"
@@ -81,7 +84,19 @@
     </fragment>
     <fragment
         android:id="@+id/registration3"
-        android:name="com.example.taskss.ui.state_holder.Registration3"
+        android:name="com.example.taskss.ui.Registration3"
         android:label="fragment_registration3"
         tools:layout="@layout/fragment_registration3" />
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.taskss.ui.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_secondFragment2"
+            app:destination="@id/secondFragment2" />
+        <action
+            android:id="@+id/action_menuFragment_to_fragmentResview"
+            app:destination="@id/fragmentResview" />
+    </fragment>
 </navigation>
