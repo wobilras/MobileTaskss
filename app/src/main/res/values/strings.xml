@@ -97,4 +97,7 @@
     <string name="nearestCars">Ближайшие авто</string>
     <string name="aboutTheApp">О приложении</string>
     <string name="settings">Настройки</string>
+    <string name="aboutapp1">Приложение создано в образовательных целях</string>
+    <string name="aboutapp2">-------------------------</string>
+    <string name="aboutapp3">Создано студентом ИКБО-07-21 Семёновым Владимиром</string>
 </resources>

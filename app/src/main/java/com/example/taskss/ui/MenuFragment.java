@@ -44,5 +44,12 @@ public class MenuFragment extends Fragment {
                 Navigation.findNavController(v).navigate(R.id.action_menuFragment_to_fragmentResview);
             }
         });
+        Button btnAboutApp = view.findViewById(R.id.buttonAboutTheApp);
+        btnAboutApp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_menuFragment_to_aboutTheApp);
+            }
+        });
     }
 }
