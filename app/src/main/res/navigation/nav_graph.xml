@@ -66,7 +66,7 @@
         tools:layout="@layout/fragment_reserved_car" />
     <fragment
         android:id="@+id/registration"
-        android:name="com.example.taskss.ui.Registration1"
+        android:name="com.example.taskss.ui.registration.Registration1"
         android:label="fragment_registration"
         tools:layout="@layout/fragment_registration1" >
         <action
@@ -75,7 +75,7 @@
     </fragment>
     <fragment
         android:id="@+id/registration2"
-        android:name="com.example.taskss.ui.Registration2"
+        android:name="com.example.taskss.ui.registration.Registration2"
         android:label="fragment_registration2"
         tools:layout="@layout/fragment_registration2" >
         <action
@@ -84,7 +84,7 @@
     </fragment>
     <fragment
         android:id="@+id/registration3"
-        android:name="com.example.taskss.ui.Registration3"
+        android:name="com.example.taskss.ui.registration.Registration3"
         android:label="fragment_registration3"
         tools:layout="@layout/fragment_registration3" />
     <fragment

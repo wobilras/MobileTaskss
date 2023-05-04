@@ -26,16 +26,16 @@ import java.util.List;
 
 public class ChooseCountryFragment extends Fragment {
     public String TAG = "list";
-    interface OnFragmentSendDataListener {
-        void onSendData(String data);
-    }
+    //interface OnFragmentSendDataListener {
+    //    void onSendData(String data);
+    //}
     //private ChooseCountryFragment.OnFragmentSendDataListener fragmentSendDataListener;
 
     String[] countries = getResources().getStringArray(R.array.Countries);
     @Override
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
-       // fragmentSendDataListener = (ChooseCountryFragment.OnFragmentSendDataListener) context;
+        //fragmentSendDataListener = (ChooseCountryFragment.OnFragmentSendDataListener) context;
     }
 
     @Override
