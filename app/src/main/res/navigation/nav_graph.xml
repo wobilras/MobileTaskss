@@ -12,10 +12,18 @@
         tools:layout="@layout/fragment_first">
         <action
             android:id="@+id/action_firstFragment_to_registration"
-            app:destination="@id/registration" />
+            app:destination="@id/registration"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
         <action
             android:id="@+id/action_firstFragment_to_menuFragment"
-            app:destination="@id/menuFragment" />
+            app:destination="@id/menuFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
     </fragment>
     <fragment
         android:id="@+id/secondFragment2"
@@ -24,17 +32,29 @@
         tools:layout="@layout/fragment_second">
         <action
             android:id="@+id/action_secondFragment2_to_chooseCountryFragment"
-            app:destination="@id/chooseCountryFragment" />
+            app:destination="@id/chooseCountryFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
         <action
             android:id="@+id/action_secondFragment2_to_fragmentResview"
-            app:destination="@id/fragmentResview" />
+            app:destination="@id/fragmentResview"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
         <argument
             android:name="Login"
             app:argType="string"
             android:defaultValue="User" />
         <action
             android:id="@+id/action_secondFragment2_to_firstFragment"
-            app:destination="@id/firstFragment" />
+            app:destination="@id/firstFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
     </fragment>
     <fragment
         android:id="@+id/chooseCountryFragment"
@@ -48,7 +68,11 @@
         tools:layout="@layout/fragment_resview" >
         <action
             android:id="@+id/action_fragmentResview_to_carInfoFragment"
-            app:destination="@id/carInfoFragment" />
+            app:destination="@id/carInfoFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
     </fragment>
     <fragment
         android:id="@+id/carInfoFragment"
@@ -57,7 +81,11 @@
         tools:layout="@layout/fragmet_car_info">
         <action
             android:id="@+id/action_carInfoFragment_to_reservedCar"
-            app:destination="@id/reservedCar" />
+            app:destination="@id/reservedCar"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
     </fragment>
     <fragment
         android:id="@+id/reservedCar"
@@ -71,7 +99,11 @@
         tools:layout="@layout/fragment_registration1" >
         <action
             android:id="@+id/action_registration_to_registration2"
-            app:destination="@id/registration2" />
+            app:destination="@id/registration2"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
     </fragment>
     <fragment
         android:id="@+id/registration2"
@@ -80,7 +112,11 @@
         tools:layout="@layout/fragment_registration2" >
         <action
             android:id="@+id/action_registration2_to_registration3"
-            app:destination="@id/registration3" />
+            app:destination="@id/registration3"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
     </fragment>
     <fragment
         android:id="@+id/registration3"
@@ -94,13 +130,25 @@
         tools:layout="@layout/fragment_menu" >
         <action
             android:id="@+id/action_menuFragment_to_secondFragment2"
-            app:destination="@id/secondFragment2" />
+            app:destination="@id/secondFragment2"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
         <action
             android:id="@+id/action_menuFragment_to_fragmentResview"
-            app:destination="@id/fragmentResview" />
+            app:destination="@id/fragmentResview"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
         <action
             android:id="@+id/action_menuFragment_to_aboutTheApp"
-            app:destination="@id/aboutTheApp" />
+            app:destination="@id/aboutTheApp"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
     </fragment>
     <fragment
         android:id="@+id/aboutTheApp"
