@@ -10,7 +10,7 @@
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="match_parent"
-        android:layout_height="380dp"
+        android:layout_height="390dp"
         android:src="@drawable/smile_face" />
 
     <TextView
@@ -35,5 +35,11 @@
         android:text="@string/aboutapp3"
         android:textColor="#000000"
         android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/maskAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/animated_mask" />
 
 </LinearLayout>
