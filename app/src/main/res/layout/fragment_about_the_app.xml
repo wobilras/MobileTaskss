@@ -40,6 +40,6 @@
         android:id="@+id/maskAbout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/animated_mask" />
+        android:src="@drawable/avd_anim" />
 
 </LinearLayout>
