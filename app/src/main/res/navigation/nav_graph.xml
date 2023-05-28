@@ -122,7 +122,11 @@
         android:id="@+id/registration3"
         android:name="com.example.taskss.ui.registration.Registration3"
         android:label="fragment_registration3"
-        tools:layout="@layout/fragment_registration3" />
+        tools:layout="@layout/fragment_registration3" >
+        <action
+            android:id="@+id/action_registration3_to_firstFragment"
+            app:destination="@id/firstFragment" />
+    </fragment>
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.example.taskss.ui.MenuFragment"
