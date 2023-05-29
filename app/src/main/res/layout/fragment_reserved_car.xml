@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.ReservedCar" >
+    tools:context=".ui.reservation.ReservedCar" >
 
     <TextView
         android:id="@+id/carNameReserved"
@@ -24,7 +24,7 @@
         android:layout_marginTop="55dp"
         android:text="@string/carNumber"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/carImageReserved" />
 
     <TextView
         android:id="@+id/tripCost"
@@ -37,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/fuelReserved" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/carImageReserved"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -74,7 +74,7 @@
         android:layout_marginTop="55dp"
         android:text="@string/fuel"
         app:layout_constraintStart_toEndOf="@+id/carNumberReserved"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/carImageReserved" />
 
     <TextView
         android:id="@+id/fuelPersReserved"
@@ -84,7 +84,7 @@
         android:layout_marginTop="55dp"
         android:text="@string/fuelPercent"
         app:layout_constraintStart_toEndOf="@+id/fuelReserved"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/carImageReserved" />
 
     <TextView
         android:id="@+id/costReserved"
@@ -105,4 +105,15 @@
         android:text="@string/costValRes"
         app:layout_constraintStart_toEndOf="@+id/costReserved"
         app:layout_constraintTop_toBottomOf="@+id/tripCost" />
+
+    <Chronometer
+        android:id="@+id/travelTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:countDown="false"
+        android:format="Время поездки: %s"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/costReserved" />
 </androidx.constraintlayout.widget.ConstraintLayout>

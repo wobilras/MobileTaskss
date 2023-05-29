@@ -19,6 +19,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Switch;
 
 import com.example.taskss.R;
 
@@ -52,8 +53,9 @@ public class Registration2 extends Fragment {
 
         EditText licenceNum = view.findViewById(R.id.licenseNumber);
         String licenceNumSave = licenceNum.getText().toString();
-        //SwitchCompat licenceType = view.findViewById(R.id.switchLicense); //крашит на этом моменте
+        //Switch licenceType = view.findViewById(R.id.switchLicense);//крашит
         //Boolean licenceTypeSave = licenceType.isChecked();
+
 
         Button btnContinue = view.findViewById(R.id.buttonContinueReg2);
         btnContinue.setOnClickListener(new View.OnClickListener() {

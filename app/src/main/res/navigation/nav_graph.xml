@@ -63,7 +63,7 @@
         tools:layout="@layout/fragment_choose" />
     <fragment
         android:id="@+id/fragmentResview"
-        android:name="com.example.taskss.ui.FragmentResview"
+        android:name="com.example.taskss.ui.reservation.FragmentResview"
         android:label="fragment_resview"
         tools:layout="@layout/fragment_resview" >
         <action
@@ -76,7 +76,7 @@
     </fragment>
     <fragment
         android:id="@+id/carInfoFragment"
-        android:name="com.example.taskss.ui.CarInfoFragment"
+        android:name="com.example.taskss.ui.reservation.CarInfoFragment"
         android:label="CarInfoFragment"
         tools:layout="@layout/fragmet_car_info">
         <action
@@ -86,10 +86,13 @@
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
             app:popExitAnim="@anim/slide_out"/>
+        <action
+            android:id="@+id/action_carInfoFragment_to_fragmentResview"
+            app:destination="@id/fragmentResview" />
     </fragment>
     <fragment
         android:id="@+id/reservedCar"
-        android:name="com.example.taskss.ui.ReservedCar"
+        android:name="com.example.taskss.ui.reservation.ReservedCar"
         android:label="fragment_reserved_car"
         tools:layout="@layout/fragment_reserved_car" />
     <fragment
@@ -154,8 +157,11 @@
             app:popEnterAnim="@anim/fade_in"
             app:popExitAnim="@anim/slide_out"/>
         <action
-            android:id="@+id/action_menuFragment_to_webServiceRequests"
-            app:destination="@id/webServiceRequests" />
+            android:id="@+id/action_menuFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutTheApp"
@@ -167,4 +173,14 @@
         android:name="com.example.taskss.ui.WebServiceRequests"
         android:label="fragment_web_service_requests"
         tools:layout="@layout/fragment_web_service_requests" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.taskss.ui.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@xml/root_preferences"/>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.taskss.ui.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
 </navigation>

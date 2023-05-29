@@ -1,8 +1,9 @@
-package com.example.taskss.ui;
+package com.example.taskss.ui.reservation;
 
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,9 +12,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import com.example.taskss.R;
 import com.example.taskss.data.db.entity.State;
+import com.example.taskss.ui.reservation.FragmentResview;
 import com.example.taskss.ui.state_holder.CarInfoViewModel;
 
 public class CarInfoFragment extends Fragment {
@@ -37,7 +40,20 @@ public class CarInfoFragment extends Fragment {
                 carInfoName.setText(states.getName());
             }
         });
-
+        Button btnReserveCar = view.findViewById(R.id.reservating);
+        btnReserveCar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_carInfoFragment_to_reservedCar);
+            }
+        });
+        Button btnBack = view.findViewById(R.id.backFromInfo);
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_carInfoFragment_to_fragmentResview);
+            }
+        });
     }
 
     private void parseArgs() {

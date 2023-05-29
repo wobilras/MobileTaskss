@@ -55,7 +55,14 @@ public class MenuFragment extends Fragment {
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_menuFragment_to_webServiceRequests);
+                Navigation.findNavController(v).navigate(R.id.action_menuFragment_to_mapFragment);
+            }
+        });
+        Button btnSettings = view.findViewById(R.id.buttonSettings);
+        btnSettings.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Navigation.findNavController(v).navigate(R.id.action_menuFragment_to_settingsFragment);
             }
         });
     }

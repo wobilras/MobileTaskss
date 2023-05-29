@@ -1,4 +1,4 @@
-package com.example.taskss.ui;
+package com.example.taskss.ui.reservation;
 
 import android.os.Bundle;
 
