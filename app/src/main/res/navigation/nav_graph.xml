@@ -88,13 +88,25 @@
             app:popExitAnim="@anim/slide_out"/>
         <action
             android:id="@+id/action_carInfoFragment_to_fragmentResview"
-            app:destination="@id/fragmentResview" />
+            app:destination="@id/fragmentResview"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
     </fragment>
     <fragment
         android:id="@+id/reservedCar"
         android:name="com.example.taskss.ui.reservation.ReservedCar"
         android:label="fragment_reserved_car"
-        tools:layout="@layout/fragment_reserved_car" />
+        tools:layout="@layout/fragment_reserved_car" >
+        <action
+            android:id="@+id/action_reservedCar_to_endOfReservation"
+            app:destination="@id/endOfReservation"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
+    </fragment>
     <fragment
         android:id="@+id/registration"
         android:name="com.example.taskss.ui.registration.Registration1"
@@ -128,7 +140,11 @@
         tools:layout="@layout/fragment_registration3" >
         <action
             android:id="@+id/action_registration3_to_firstFragment"
-            app:destination="@id/firstFragment" />
+            app:destination="@id/firstFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
@@ -158,21 +174,24 @@
             app:popExitAnim="@anim/slide_out"/>
         <action
             android:id="@+id/action_menuFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
         <action
             android:id="@+id/action_menuFragment_to_mapFragment"
-            app:destination="@id/mapFragment" />
+            app:destination="@id/mapFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
     </fragment>
     <fragment
         android:id="@+id/aboutTheApp"
         android:name="com.example.taskss.ui.AboutTheApp"
         android:label="fragment_about_the_app"
         tools:layout="@layout/fragment_about_the_app" />
-    <fragment
-        android:id="@+id/webServiceRequests"
-        android:name="com.example.taskss.ui.WebServiceRequests"
-        android:label="fragment_web_service_requests"
-        tools:layout="@layout/fragment_web_service_requests" />
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.example.taskss.ui.SettingsFragment"
@@ -183,4 +202,30 @@
         android:name="com.example.taskss.ui.MapFragment"
         android:label="fragment_map"
         tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/endOfReservation"
+        android:name="com.example.taskss.ui.reservation.EndOfReservation"
+        android:label="fragment_end_of_reservation"
+        tools:layout="@layout/fragment_end_of_reservation" >
+        <action
+            android:id="@+id/action_endOfReservation_to_endOfEndReservation"
+            app:destination="@id/endOfEndReservation"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
+    </fragment>
+    <fragment
+        android:id="@+id/endOfEndReservation"
+        android:name="com.example.taskss.ui.reservation.EndOfEndReservation"
+        android:label="fragment_end_of_end_reservation"
+        tools:layout="@layout/fragment_end_of_end_reservation" >
+        <action
+            android:id="@+id/action_endOfEndReservation_to_menuFragment"
+            app:destination="@id/menuFragment"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/slide_out"/>
+    </fragment>
 </navigation>

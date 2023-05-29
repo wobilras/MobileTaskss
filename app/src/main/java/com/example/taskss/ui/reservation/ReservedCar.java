@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 
 import android.os.SystemClock;
 import android.view.LayoutInflater;
@@ -40,6 +41,7 @@ public class ReservedCar extends Fragment {
             @Override
             public void onClick(View v) {
                 mChronometer.stop();
+                Navigation.findNavController(v).navigate(R.id.action_reservedCar_to_endOfReservation);
             }
         });
     }
