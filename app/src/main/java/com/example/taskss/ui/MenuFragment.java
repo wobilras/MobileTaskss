@@ -26,7 +26,9 @@ public class MenuFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         TextView tv = view.findViewById(R.id.userName);
-        tv.setText(getArguments().getString("data"));
+        if (getArguments() != null) {
+            tv.setText(getArguments().getString("data"));
+        }
         Button btnProfile = view.findViewById(R.id.buttonProfile);
         btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
