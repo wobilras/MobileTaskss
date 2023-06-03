@@ -16,6 +16,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.taskss.R;
+import com.example.taskss.data.MainRepository;
+import com.example.taskss.data.db.entity.User;
 
 public class Registration1 extends Fragment {
 
@@ -30,11 +32,8 @@ public class Registration1 extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         EditText mail = view.findViewById(R.id.elMailReg);
-        String mailSave = mail.getText().toString();
         EditText login = view.findViewById(R.id.loginReg);
-        String loginSave = login.getText().toString();
         EditText pass = view.findViewById(R.id.passReg);
-        String passSave = pass.getText().toString();
 
         EditText pass2 = view.findViewById(R.id.pass2Reg);
         Button btnContinue = view.findViewById(R.id.buttonContinueReg);
@@ -43,7 +42,15 @@ public class Registration1 extends Fragment {
             public void onClick(View v) {
                 if (pass.getText().toString().equals(pass2.getText().toString())) {
                     Log.d("111", "Clicked button continue");
-                    Navigation.findNavController(v).navigate(R.id.action_registration_to_registration2);
+                    String mailS = mail.getText().toString();
+                    String loginS = login.getText().toString();
+                    String passS = pass.getText().toString();
+                    Bundle bundle = new Bundle();
+                    bundle.putString("mail", mailS);
+                    bundle.putString("login", loginS);
+                    bundle.putString("pass", passS);
+
+                    Navigation.findNavController(v).navigate(R.id.action_registration_to_registration2, bundle);
                 }
                 else
                     Toast.makeText(getContext(), "Повторный пароль введен неверно!", Toast.LENGTH_SHORT).show();

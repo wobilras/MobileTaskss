@@ -11,6 +11,8 @@ import com.example.taskss.FileWorker;
 import com.example.taskss.R;
 import com.example.taskss.data.db.DataBase;
 import com.example.taskss.data.db.dao.StateDao;
+import com.example.taskss.data.db.dao.UserDao;
+import com.example.taskss.data.db.entity.User;
 import com.example.taskss.data.models.LoginPerson;
 import com.example.taskss.data.db.entity.State;
 
@@ -48,7 +50,10 @@ public class DBRemoteDataSource {
         return stateDao.getCarList();
     }
 
-    public boolean PersonLogin(LoginPerson loginPerson, boolean allow) {
+    public LiveData<Boolean> PersonLogin(String login, String pass) {
+        DataBase db = DataBase.getDatabase(context);
+        UserDao userDao = db.userDao();
+        return userDao.getUserByLogin(login, pass);
 //        String filename = "login";
 //        String fileContents = loginPerson.getLogin();
 //        File dir = context.getFilesDir();
@@ -77,12 +82,12 @@ public class DBRemoteDataSource {
 //                throw new RuntimeException(e);
 //            }
 //        }
-        OneTimeWorkRequest fileRequest =
-                new OneTimeWorkRequest.Builder(FileWorker.class)
-                        .setInputData(createInputData(loginPerson.getLogin()))
-                        .build();
-        workManager.enqueue(fileRequest);
-        return !loginPerson.getLogin().equals("");
+//        OneTimeWorkRequest fileRequest =
+//                new OneTimeWorkRequest.Builder(FileWorker.class)
+//                        .setInputData(createInputData(loginPerson.getLogin()))
+//                        .build();
+//        workManager.enqueue(fileRequest);
+//        return !loginPerson.getLogin().equals("");
     }
 
     private Data createInputData(String login) {
@@ -96,4 +101,13 @@ public class DBRemoteDataSource {
         StateDao stateDao = db.stateDao();
         return stateDao.getItem(position + 1);
     }
+
+    public void registration(User user) {
+        DataBase db = DataBase.getDatabase(context);
+        UserDao userDao = db.userDao();
+        db.getQueryExecutor().execute(() -> {
+            userDao.insert(user);
+        });
+    }
+
 }

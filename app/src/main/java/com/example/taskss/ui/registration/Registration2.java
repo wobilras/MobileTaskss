@@ -52,7 +52,6 @@ public class Registration2 extends Fragment {
         });
 
         EditText licenceNum = view.findViewById(R.id.licenseNumber);
-        String licenceNumSave = licenceNum.getText().toString();
         //Switch licenceType = view.findViewById(R.id.switchLicense);//крашит
         //Boolean licenceTypeSave = licenceType.isChecked();
 
@@ -61,7 +60,10 @@ public class Registration2 extends Fragment {
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_registration2_to_registration3);
+                String licenceNumS = licenceNum.getText().toString();
+                Bundle bundle = getArguments();
+                bundle.putString("licenceNum", licenceNumS);
+                Navigation.findNavController(v).navigate(R.id.action_registration2_to_registration3, bundle);
             }
         });
     }

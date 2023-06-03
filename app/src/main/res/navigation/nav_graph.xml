@@ -213,19 +213,12 @@
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
-            app:popExitAnim="@anim/slide_out"/>
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/endOfEndReservation"
         android:name="com.example.taskss.ui.reservation.EndOfEndReservation"
         android:label="fragment_end_of_end_reservation"
-        tools:layout="@layout/fragment_end_of_end_reservation" >
-        <action
-            android:id="@+id/action_endOfEndReservation_to_menuFragment"
-            app:destination="@id/menuFragment"
-            app:enterAnim="@anim/slide_in"
-            app:exitAnim="@anim/fade_out"
-            app:popEnterAnim="@anim/fade_in"
-            app:popExitAnim="@anim/slide_out"/>
-    </fragment>
+        tools:layout="@layout/fragment_end_of_end_reservation" />
 </navigation>

@@ -29,7 +29,7 @@ public class EndOfEndReservation extends Fragment {
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_endOfEndReservation_to_menuFragment);
+                requireActivity().onBackPressed();
             }
         });
     }

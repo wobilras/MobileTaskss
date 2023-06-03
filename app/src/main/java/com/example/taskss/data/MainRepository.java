@@ -6,6 +6,7 @@ import androidx.lifecycle.LiveData;
 
 import com.example.taskss.data.api.PostAPI;
 import com.example.taskss.data.api.RetrofitFactory;
+import com.example.taskss.data.db.entity.User;
 import com.example.taskss.data.models.LoginPerson;
 import com.example.taskss.data.db.entity.State;
 import com.example.taskss.data.models.Post;
@@ -31,8 +32,8 @@ public class MainRepository implements MainProtocol {
 
 
     @Override
-    public boolean personLogin(LoginPerson loginPerson, boolean allow) {
-        return dataSource.PersonLogin(loginPerson, allow);
+    public LiveData<Boolean> personLogin(String login, String pass) {
+        return dataSource.PersonLogin(login, pass);
     }
 
     @Override
@@ -63,4 +64,11 @@ public class MainRepository implements MainProtocol {
         Call<List<Post>> call = postAPI.getAllPosts();
         return call;
     }
+
+    @Override
+    public void registration(User user) {
+        dataSource.registration(user);
+    }
+
+
 }

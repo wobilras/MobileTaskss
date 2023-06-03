@@ -13,6 +13,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.PermissionChecker;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentResultListener;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
@@ -55,6 +56,7 @@ public class FirstFragment extends Fragment {
         viewModel = new ViewModelProvider(this).get(FirstViewModel.class);
         super.onViewCreated(view, savedInstanceState);
         EditText ed = view.findViewById(R.id.editText);
+        EditText editTextTextPassword = view.findViewById(R.id.editTextTextPassword);
         Intent intent = requireActivity().getIntent();
         if (intent != null) {
             String action = intent.getAction();
@@ -82,26 +84,22 @@ public class FirstFragment extends Fragment {
                 Bundle bundle = new Bundle();
                 bundle.putString("data", data);
 
-                // write
-                SharedPreferences sharedPrefWrite =
-                        requireActivity().getPreferences(Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sharedPrefWrite.edit();
-                editor.putString(KEY_LOGIN, data);
-                editor.apply();
-
-                if (viewModel.login(
+                viewModel.login(
                         ed.getText().toString(),
-                        allowedPermission()
-                )) {
-                    Navigation.findNavController(v).navigate(R.id.action_firstFragment_to_menuFragment, bundle);
-                }
+                        editTextTextPassword.getText().toString()).observe(
+                        getViewLifecycleOwner(),
+                        aBoolean -> {
+                            if (aBoolean) {
+                                Navigation.findNavController(v).navigate(R.id.action_firstFragment_to_menuFragment, bundle);
+                            }
+                        });
             }
         });
         btnReg = view.findViewById(R.id.registrationButton);
         btnReg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d(TAG,"Clicked button registration");
+                Log.d(TAG, "Clicked button registration");
                 Navigation.findNavController(v).navigate(R.id.action_firstFragment_to_registration);
             }
         });
@@ -110,6 +108,7 @@ public class FirstFragment extends Fragment {
         ImageView myImageView = view.findViewById(R.id.imageOnOpenAct);
         myImageView.setImageResource(R.drawable.ic_action_name);
     }
+
     private boolean allowedPermission() {
         if (checkSelfPermission(requireContext(), android.Manifest.permission.WRITE_EXTERNAL_STORAGE)
                 == PermissionChecker.PERMISSION_GRANTED) {
