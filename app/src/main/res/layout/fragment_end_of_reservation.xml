@@ -20,10 +20,11 @@
     <TextView
         android:id="@+id/EndText1"
         android:layout_width="300dp"
-        android:layout_height="40dp"
+        android:layout_height="80dp"
         android:layout_marginTop="20dp"
         android:text="Для завершения аренды сфотографируйте авто со всех сторон"
         android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EndImage" />
@@ -33,8 +34,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/aquamarine"
         android:text="@string/takePhoto"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EndText1" />
 
@@ -44,6 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="40dp"
         android:text="@string/carFinish"
+        android:backgroundTint="@color/aquamarine"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -51,10 +56,11 @@
     <TextView
         android:id="@+id/EndText2"
         android:layout_width="240dp"
-        android:layout_height="40dp"
+        android:layout_height="80dp"
         android:layout_marginTop="40dp"
         android:text="Не забудьте забрать свои вещи из автомобиля"
         android:textAlignment="center"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnTakePhotoEnd" />
@@ -62,9 +68,9 @@
     <TextView
         android:id="@+id/countOfPhoto"
         android:layout_width="131dp"
-        android:layout_height="53dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="40dp"
         android:text="@string/countOfPickedPhoto"
         android:textAlignment="center"
         app:layout_constraintStart_toEndOf="@+id/btnTakePhotoEnd"

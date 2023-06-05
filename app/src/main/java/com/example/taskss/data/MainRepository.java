@@ -70,5 +70,4 @@ public class MainRepository implements MainProtocol {
         dataSource.registration(user);
     }
 
-
 }

@@ -15,6 +15,8 @@ import android.widget.TextView;
 
 import com.example.taskss.R;
 
+import java.util.Objects;
+
 public class MenuFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -65,6 +67,18 @@ public class MenuFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Navigation.findNavController(v).navigate(R.id.action_menuFragment_to_settingsFragment);
+            }
+        });
+
+        Button btnAddCars = view.findViewById(R.id.addCars);
+        if (Objects.equals(getArguments().getString("data"), "Admin")){
+            btnAddCars.setVisibility(View.VISIBLE);
+        }
+        else btnAddCars.setVisibility(View.GONE);
+        btnAddCars.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
             }
         });
     }

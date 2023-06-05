@@ -12,6 +12,8 @@
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:text="@string/textProfile"
+        android:backgroundTint="@color/aquamarine"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userName" />
@@ -22,6 +24,8 @@
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:text="@string/map"
+        android:backgroundTint="@color/aquamarine"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonProfile" />
@@ -32,6 +36,8 @@
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:text="@string/nearestCars"
+        android:backgroundTint="@color/aquamarine"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonMap" />
@@ -42,6 +48,8 @@
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:text="@string/aboutTheApp"
+        android:backgroundTint="@color/aquamarine"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonNearestCars" />
@@ -53,6 +61,7 @@
         android:layout_marginStart="40dp"
         android:layout_marginTop="30dp"
         android:text="@string/userName"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -62,7 +71,21 @@
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:text="@string/settings"
+        android:backgroundTint="@color/aquamarine"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonAboutTheApp" />
+
+    <Button
+        android:id="@+id/addCars"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/addCars"
+        android:backgroundTint="@color/massive_yellow"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonSettings" />
 </androidx.constraintlayout.widget.ConstraintLayout>

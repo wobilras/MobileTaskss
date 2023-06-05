@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:text="@string/carInfoName"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,6 +24,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="55dp"
         android:text="@string/carNumber"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/carImageReserved" />
 
@@ -32,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:text="@string/tripCost"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fuelReserved" />
@@ -53,6 +56,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginBottom="80dp"
         android:text="@string/carOpen"
+        android:backgroundTint="@color/massive_yellow"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -63,6 +68,8 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="80dp"
         android:text="@string/carFinish"
+        android:backgroundTint="@color/aquamarine"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -73,6 +80,7 @@
         android:layout_marginStart="50dp"
         android:layout_marginTop="55dp"
         android:text="@string/fuel"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/carNumberReserved"
         app:layout_constraintTop_toBottomOf="@+id/carImageReserved" />
 
@@ -83,6 +91,7 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="55dp"
         android:text="@string/fuelPercent"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/fuelReserved"
         app:layout_constraintTop_toBottomOf="@+id/carImageReserved" />
 
@@ -93,6 +102,7 @@
         android:layout_marginStart="170dp"
         android:layout_marginTop="30dp"
         android:text="@string/costReserved"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tripCost" />
 
@@ -103,6 +113,7 @@
         android:layout_marginStart="13dp"
         android:layout_marginTop="30dp"
         android:text="@string/costValRes"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/costReserved"
         app:layout_constraintTop_toBottomOf="@+id/tripCost" />
 
