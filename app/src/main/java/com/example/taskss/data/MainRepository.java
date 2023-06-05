@@ -70,4 +70,8 @@ public class MainRepository implements MainProtocol {
         dataSource.registration(user);
     }
 
+    @Override
+    public void addCar(State state) {
+        dataSource.addCar(state);
+    }
 }

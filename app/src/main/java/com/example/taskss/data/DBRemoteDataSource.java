@@ -3,6 +3,7 @@ package com.example.taskss.data;
 import android.content.Context;
 
 import androidx.lifecycle.LiveData;
+import androidx.room.Dao;
 import androidx.work.Data;
 import androidx.work.OneTimeWorkRequest;
 import androidx.work.WorkManager;
@@ -42,11 +43,11 @@ public class DBRemoteDataSource {
         DataBase db = DataBase.getDatabase(context);
         StateDao stateDao = db.stateDao();
         // Добавление элемента в бд
-        db.getQueryExecutor().execute(() -> {
-            for (State state : states) {
-                stateDao.insert(state);
-            }
-        });
+//        db.getQueryExecutor().execute(() -> {
+//            for (State state : states) {
+//                stateDao.insert(state);
+//            }
+//        });
         return stateDao.getCarList();
     }
 
@@ -110,4 +111,11 @@ public class DBRemoteDataSource {
         });
     }
 
+    public void addCar(State state){
+        DataBase db = DataBase.getDatabase(context);
+        StateDao stateDao = db.stateDao();
+        db.getQueryExecutor().execute(() -> {
+            stateDao.insert(state);
+        });
+    }
 }

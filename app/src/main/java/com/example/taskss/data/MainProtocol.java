@@ -26,4 +26,6 @@ public interface MainProtocol {
     Call<List<Post>> getAllPosts();
 
     void registration(User user);
+
+    void addCar(State state);
 }

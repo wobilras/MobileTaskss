@@ -157,7 +157,8 @@
             app:enterAnim="@anim/slide_in"
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
-            app:popExitAnim="@anim/slide_out"/>
+            app:popExitAnim="@anim/slide_out"
+            app:popUpTo="@id/menuFragment" />
         <action
             android:id="@+id/action_menuFragment_to_fragmentResview"
             app:destination="@id/fragmentResview"
@@ -186,6 +187,10 @@
             app:exitAnim="@anim/fade_out"
             app:popEnterAnim="@anim/fade_in"
             app:popExitAnim="@anim/slide_out"/>
+        <action
+            android:id="@+id/action_menuFragment_to_addingCar"
+            app:destination="@id/addingCar"
+            app:popUpTo="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutTheApp"
@@ -221,4 +226,9 @@
         android:name="com.example.taskss.ui.reservation.EndOfEndReservation"
         android:label="fragment_end_of_end_reservation"
         tools:layout="@layout/fragment_end_of_end_reservation" />
+    <fragment
+        android:id="@+id/addingCar"
+        android:name="com.example.taskss.ui.AddingCar"
+        android:label="fragment_adding_car"
+        tools:layout="@layout/fragment_adding_car" />
 </navigation>

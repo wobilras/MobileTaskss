@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
@@ -14,10 +15,14 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.taskss.R;
+import com.example.taskss.ui.state_holder.AddingCarViewModel;
 
 import java.util.Objects;
 
 public class MenuFragment extends Fragment {
+
+    private AddingCarViewModel viewModel;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -27,10 +32,13 @@ public class MenuFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        viewModel = new ViewModelProvider(this).get(AddingCarViewModel.class);
+
         TextView tv = view.findViewById(R.id.userName);
         if (getArguments() != null) {
             tv.setText(getArguments().getString("data"));
         }
+
         Button btnProfile = view.findViewById(R.id.buttonProfile);
         btnProfile.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +86,7 @@ public class MenuFragment extends Fragment {
         btnAddCars.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Navigation.findNavController(v).navigate(R.id.action_menuFragment_to_addingCar);
             }
         });
     }
