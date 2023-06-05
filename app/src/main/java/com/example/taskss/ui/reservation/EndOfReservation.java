@@ -65,11 +65,12 @@ public class EndOfReservation extends Fragment {
         mCountTextView = view.findViewById(R.id.countOfPhoto);
         updateCountTextView();
 
+        Bundle time = getArguments();
         Button btnEnd = view.findViewById(R.id.btnEndRes);
         btnEnd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_endOfReservation_to_endOfEndReservation);
+                Navigation.findNavController(v).navigate(R.id.action_endOfReservation_to_endOfEndReservation, time);
             }
         });
     }

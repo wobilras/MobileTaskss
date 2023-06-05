@@ -23,6 +23,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/arendEnd"
+            android:textAlignment="center"
+            android:textColor="@color/black"
             android:textSize="24sp" />
 
         <Space
@@ -34,6 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/total"
+            android:textColor="@color/black"
             android:textSize="24sp" />
 
         <Space
@@ -45,6 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/totalCost"
+            android:textColor="@color/black"
             android:textSize="24sp" />
     </LinearLayout>
 

@@ -41,7 +41,9 @@ public class ReservedCar extends Fragment {
             @Override
             public void onClick(View v) {
                 mChronometer.stop();
-                Navigation.findNavController(v).navigate(R.id.action_reservedCar_to_endOfReservation);
+                Bundle time = new Bundle();
+                time.putString("time", mChronometer.getText().toString());
+                Navigation.findNavController(v).navigate(R.id.action_reservedCar_to_endOfReservation, time);
             }
         });
     }

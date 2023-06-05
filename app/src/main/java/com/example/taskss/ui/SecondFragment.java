@@ -60,7 +60,7 @@ public class SecondFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()){
             case R.id.buttonCountry:
                 Log.d("111","Clicked country choose");
-                Navigation.findNavController(v).navigate(R.id.action_secondFragment2_to_chooseCountryFragment);
+                //Navigation.findNavController(v).navigate(R.id.action_secondFragment2_to_chooseCountryFragment);
                 break;
             case R.id.buttonChooseAuto:
                 Log.d("111","Clicked auto choose");
