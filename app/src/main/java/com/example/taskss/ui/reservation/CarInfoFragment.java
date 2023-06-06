@@ -33,18 +33,20 @@ public class CarInfoFragment extends Fragment {
         ImageView carInfoImage = view.findViewById(R.id.carInfoImage);
         TextView carInfoName = view.findViewById(R.id.carInfoName);
         parseArgs();
+        Bundle bundle = new Bundle();
         viewModel.carListItemLd.observe(getViewLifecycleOwner(), new Observer<State>() {
             @Override
             public void onChanged(State states) {
                 carInfoImage.setImageResource(states.getCarResource());
                 carInfoName.setText(states.getName());
+                bundle.putInt("image", states.getCarResource());
             }
         });
         Button btnReserveCar = view.findViewById(R.id.reservating);
         btnReserveCar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(v).navigate(R.id.action_carInfoFragment_to_reservedCar);
+                Navigation.findNavController(v).navigate(R.id.action_carInfoFragment_to_reservedCar, bundle);
             }
         });
         Button btnBack = view.findViewById(R.id.backFromInfo);

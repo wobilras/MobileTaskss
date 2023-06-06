@@ -36,6 +36,9 @@ public class ReservedCar extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         mChronometer = view.findViewById(R.id.travelTime);
         mChronometer.start();
+        ImageView carImage = view.findViewById(R.id.carImageReserved);
+        Bundle bundle = getArguments();
+        carImage.setImageResource(bundle.getInt("image"));
         Button btnCarFinish = view.findViewById(R.id.carFinish);
         btnCarFinish.setOnClickListener(new View.OnClickListener() {
             @Override

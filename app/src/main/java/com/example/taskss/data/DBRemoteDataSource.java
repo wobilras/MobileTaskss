@@ -1,6 +1,7 @@
 package com.example.taskss.data;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -42,12 +43,17 @@ public class DBRemoteDataSource {
         }
         DataBase db = DataBase.getDatabase(context);
         StateDao stateDao = db.stateDao();
-        // Добавление элемента в бд
-//        db.getQueryExecutor().execute(() -> {
-//            for (State state : states) {
-//                stateDao.insert(state);
-//            }
-//        });
+        SharedPreferences prefs = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE);
+        boolean isFirstRun = prefs.getBoolean("isFirstRun", true);
+        if (isFirstRun) {
+            // Добавление элемента в бд
+            db.getQueryExecutor().execute(() -> {
+                for (State state : states) {
+                    stateDao.insert(state);
+                }
+                prefs.edit().putBoolean("isFirstRun", false).apply();
+            });
+        }
         return stateDao.getCarList();
     }
 

@@ -58,7 +58,7 @@ public class EndOfReservation extends Fragment {
         btnCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                allowedPermission();
+                //allowedPermission();
                 dispatchTakePictureIntent();
             }
         });

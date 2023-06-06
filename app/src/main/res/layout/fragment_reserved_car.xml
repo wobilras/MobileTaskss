@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="40dp"
         android:text="@string/carNumber"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,7 +32,7 @@
         android:id="@+id/tripCost"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="40dp"
         android:text="@string/tripCost"
         android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,8 +41,8 @@
 
     <ImageView
         android:id="@+id/carImageReserved"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:layout_marginTop="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -53,32 +53,33 @@
         android:id="@+id/carOpen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="80dp"
-        android:text="@string/carOpen"
+        android:layout_marginBottom="40dp"
         android:backgroundTint="@color/massive_yellow"
+        android:text="@string/carOpen"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/carFinish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/carFinish"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="80dp"
-        android:text="@string/carFinish"
+        android:layout_marginBottom="50dp"
         android:backgroundTint="@color/aquamarine"
+        android:text="@string/carFinish"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/fuelReserved"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="40dp"
         android:text="@string/fuel"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/carNumberReserved"
@@ -89,7 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="40dp"
         android:text="@string/fuelPercent"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/fuelReserved"
@@ -121,10 +122,11 @@
         android:id="@+id/travelTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:countDown="false"
         android:format="Время поездки: %s"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/costReserved" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
